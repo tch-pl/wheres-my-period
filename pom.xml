@@ -6,6 +6,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
+		<testOutputDirectory>C:\WMP_test_output</testOutputDirectory>
+		<outputDirectory>C:\WMP_target</outputDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -27,7 +29,6 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.1.1</version>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>
