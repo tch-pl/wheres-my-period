@@ -6,6 +6,7 @@ import java.util.Set;
 
 import com.mongodb.DBObject;
 
+import tch.code.period.data.dao.MongoDBDAO;
 import tch.code.period.data.dao.PeriodDAO;
 import tch.code.period.data.model.PeriodDTO;
 
