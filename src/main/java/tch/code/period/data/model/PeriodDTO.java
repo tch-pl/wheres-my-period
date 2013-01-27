@@ -4,6 +4,12 @@ import java.util.Calendar;
 
 public class PeriodDTO {
 
+	public PeriodDTO(Calendar begin, Calendar end, int magnitude) {
+		super();
+		this.begin = begin;
+		this.end = end;
+		this.magnitude = magnitude;
+	}
 	private Calendar begin;
 	private Calendar end;
 	private int magnitude;

@@ -8,23 +8,23 @@ import tch.code.period.data.model.PeriodDTO;
 
 public class PeriodDAOMock implements PeriodDAO {
 	private Set<PeriodDTO> repository;
-	
+
 	@Override
 	public Set<PeriodDTO> findAllPeriods() {
-		return repository;
+		return getRepository();
 	}
 
 	@Override
 	public void addPeriod(PeriodDTO period) {
-		repository.add(period);
+		getRepository().add(period);
 
 	}
 
 	public Set<PeriodDTO> getRepository() {
-		if (repository == null) {
-			repository = new HashSet<PeriodDTO>();
+		if (this.repository == null) {
+			this.repository = new HashSet<PeriodDTO>();
 		}
-		return repository;
+		return this.repository;
 	}
 
 }
