@@ -51,7 +51,7 @@ public abstract class MongoDBDAO<T> extends AbstractDAO<T> {
 	}
 
 	@Override
-	protected List<T> findAll() {
+	public List<T> findAll() {
 		DBCollection coll = getCurrentCollection();
 		List<T> all = new ArrayList<T>();
 		for (DBObject entity : coll.find().toArray()) {
@@ -61,7 +61,7 @@ public abstract class MongoDBDAO<T> extends AbstractDAO<T> {
 	}
 
 	@Override
-	protected void add(T entity) {
+	public void add(T entity) {
 		getCurrentCollection().insert(translateToDBObject(entity));
 	}
 
