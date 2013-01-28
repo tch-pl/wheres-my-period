@@ -6,23 +6,24 @@ import java.util.Set;
 
 import com.mongodb.DBObject;
 
+import tch.code.period.data.dao.AbstractDAO;
 import tch.code.period.data.dao.MongoDBDAO;
 import tch.code.period.data.dao.PeriodDAO;
 import tch.code.period.data.model.PeriodDTO;
 
-public class PeriodDAOImpl extends MongoDBDAO<PeriodDTO>implements PeriodDAO {
+public class PeriodDAOImpl implements PeriodDAO {
+	private AbstractDAO<PeriodDTO> dao;
 
-	public PeriodDAOImpl(String dbName) throws UnknownHostException {
-		super(dbName);
+	public PeriodDAOImpl(AbstractDAO<PeriodDTO> dao)
+			throws UnknownHostException {
+		this.dao = dao;
 	}
 
-	@Override
 	protected PeriodDTO translateToPOJO(DBObject entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	protected DBObject translateToDBObject(PeriodDTO entity) {
 		// TODO Auto-generated method stub
 		return null;
@@ -30,13 +31,13 @@ public class PeriodDAOImpl extends MongoDBDAO<PeriodDTO>implements PeriodDAO {
 
 	@Override
 	public Set<PeriodDTO> findAllPeriods() {
-		findAll();
+		dao.findAll();
 		return null;
 	}
 
 	@Override
 	public void addPeriod(PeriodDTO period) {
-		add(period);		
+		dao.add(period);
 	}
 
 }

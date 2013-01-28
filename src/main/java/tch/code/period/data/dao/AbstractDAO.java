@@ -8,7 +8,7 @@ public abstract class AbstractDAO<T> {
 		super();
 	}
 	
-	 protected abstract List<T> findAll();
-	 protected abstract void add(T entity);
+	 public abstract List<T> findAll();
+	 public abstract void add(T entity);
 	
 }
