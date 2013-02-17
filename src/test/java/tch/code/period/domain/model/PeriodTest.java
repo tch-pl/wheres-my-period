@@ -3,6 +3,7 @@ package tch.code.period.domain.model;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import tch.code.period.domain.model.Period;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

@@ -4,15 +4,18 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
+import tch.code.period.data.dao.PeriodDAO;
+import tch.code.period.data.dao.impl.PeriodDAOMock;
+import tch.code.period.data.model.PeriodDTO;
+import tch.code.period.domain.logic.PeriodNotFoundException;
+import tch.code.period.domain.logic.PeriodService;
+import tch.code.period.domain.logic.PeriodServiceImpl;
+import tch.code.period.domain.model.Period;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import tch.code.period.data.dao.PeriodDAO;
-import tch.code.period.data.dao.impl.PeriodDAOMock;
-import tch.code.period.data.model.PeriodDTO;
-import tch.code.period.domain.model.Period;
 
 public class PeriodServiceTest {
 

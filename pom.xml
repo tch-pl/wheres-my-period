@@ -5,13 +5,13 @@
 	<artifactId>WhereisMyPeriod</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
-		<sourceDirectory>src</sourceDirectory>
+		<sourceDirectory>src/main/java</sourceDirectory>
 		<testOutputDirectory>C:\WMP_test_output</testOutputDirectory>
 		<outputDirectory>C:\WMP_target</outputDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.0</version>
 				<configuration>
 					<source>1.6</source>
 					<target>1.6</target>
@@ -19,6 +19,9 @@
 			</plugin>
 		</plugins>
 	</build>
+	<properties>
+		<spring.version>3.0.5.RELEASE</spring.version>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.mongodb</groupId>
@@ -29,6 +32,20 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.1.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+			<scope>compile</scope>
+		</dependency>
+ 
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 </project>
