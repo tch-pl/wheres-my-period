@@ -2,10 +2,11 @@ package tch.code.period.data.dao.impl;
 
 import java.util.HashSet;
 import java.util.Set;
+import org.springframework.stereotype.Component;
 
 import tch.code.period.data.dao.PeriodDAO;
 import tch.code.period.data.model.PeriodDTO;
-
+@Component(value="periodDAO")
 public class PeriodDAOMock implements PeriodDAO {
 	private Set<PeriodDTO> repository;
 

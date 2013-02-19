@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import tch.code.period.data.dao.PeriodDAO;
 import tch.code.period.data.dao.impl.PeriodDAOMock;
 import tch.code.period.data.model.PeriodDTO;
@@ -16,23 +19,25 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+@ContextConfiguration("classpath:application-context.xml")
+public class PeriodServiceTest extends AbstractTestNGSpringContextTests {
 
-public class PeriodServiceTest {
-
+        @Autowired
 	private PeriodService ps;
+        @Autowired
 	private PeriodDAO dao;
 
 	private final int testPertiodCount = 12;
 
 	@BeforeTest
 	private void init() {
-		dao = new PeriodDAOMock();
-		
-		for (PeriodDTO p : createPeriodList()) {
-			dao.addPeriod(p);
-		}
-		
-		ps = new PeriodServiceImpl(dao);
+//		dao = new PeriodDAOMock();
+//		
+//		for (PeriodDTO p : createPeriodList()) {
+//			dao.addPeriod(p);
+//		}
+//		
+//		ps = new PeriodServiceImpl(dao);
 	}
 	
 	@Test

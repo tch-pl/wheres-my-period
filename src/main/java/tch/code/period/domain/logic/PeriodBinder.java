@@ -3,10 +3,12 @@ package tch.code.period.domain.logic;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import org.springframework.stereotype.Component;
 
 import tch.code.period.data.model.PeriodDTO;
 import tch.code.period.domain.model.Period;
 
+@Component(value="binder")
 public class PeriodBinder {
 	/** translates dto to domain model
 	 * @param periods dto set
